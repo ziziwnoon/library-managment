@@ -1,0 +1,15 @@
+###create
+POST http://localhost:7000/books/create
+Authorization:  Bearer {{$dotenv token}}
+Content-Type: application/json
+
+{
+    "title" : "me before you",
+    "text" : "me before you me before you",
+    "author" : "jojo moyes" ,
+    "tags" : "romantic#novel"
+}
+
+###get all books
+GET  http://localhost:7000/books/list
+Authorization:  Bearer {{$dotenv token}}

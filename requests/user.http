@@ -1,0 +1,31 @@
+###get profile 
+GET  http://localhost:7000/users/profile
+Authorization: Bearer {{$dotenv token}}
+
+###get all users 
+GET  http://localhost:7000/users/list
+Authorization: Bearer {{$dotenv token}}
+
+###get user by id 
+GET  http://localhost:7000/users/631d311754972de8b20d51dd
+Authorization: Bearer {{$dotenv token}}
+
+###get user by id 
+POST   http://localhost:7000/users/edit/631d311754972de8b20d51dd
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+{
+    "first_name" : "zeinab",
+    "last_name" : "naderi"
+}
+
+###show user's groups by id
+GET  http://localhost:7000/users/group/631d311754972de8b20d51dd
+Authorization: Bearer {{$dotenv token}}
+
+###delete user by id
+DELETE   http://localhost:7000/users/delete/631d32a8c5f52619c7ec64d3
+Authorization: Bearer {{$dotenv token}}
+
+
